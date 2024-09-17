@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indexação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#artigo1">Indexação</a></li>
+                <li><a href="#artigo2">B-tree</a></li>
+                <li><a href="#artigo3">Hash</a></li>
+                <li><a href="#artigo4">Bitmap</a></li>
+            </ul>
+        </nav>
+        <h1>Tipos de Indexação</h1>
+    </header>
+    <main>
+        <section id="artigo1">
+            <h2>Oque é Indexação</h2>
+            <p>Indexação em banco de dados refere-se ao processo de criar estruturas adicionais que melhoram 
+                a velocidade das consultas e operações de leitura em um banco de dados. Em um banco de dados,
+                 um índice é similar ao índice de um livro, que permite localizar informações específicas 
+                 rapidamente. A indexação ajuda a otimizar a performance das operações de busca, ordenação 
+                 e filtragem dos dados.</p>
+        </section>
+        <section id="artigo2">
+            <h2>B-tree</h2>
+            <p>B-Tree Index (ou B-Árvore) é uma estrutura de dados de árvore balanceada que é frequentemente usada para criar índices em bancos de dados. As principais características de uma B-Tree incluem:
+
+                Balanceamento: Todas as folhas da árvore estão no mesmo nível, o que garante que a profundidade da árvore seja minimizada.
+                Ordenação: A B-Tree mantém os dados em ordem crescente (ou decrescente), o que facilita a execução de operações de busca, inserção e exclusão de forma eficiente.
+                Eficiência: Permite buscas, inserções e exclusões em tempo logarítmico, o que é bastante eficiente para grandes volumes de dados.
+                </p>
+                <img src="images/btree exemplo.png" alt="btree exemplo">
+        </section>
+        <section id="artigo3">
+            <h2>Hash</h2>
+            <p>Hash Index é um tipo de índice que usa uma função hash para mapear chaves de índice para locais específicos na tabela. As principais características são:
+
+                Procuras rápidas: Ideal para buscas rápidas e exatas, pois a função hash mapeia diretamente o valor da chave para uma posição na tabela.
+                Desvantagens: Não é eficiente para consultas de intervalo ou ordenação de dados, pois a função hash não preserva a ordem dos dados.
+                </p>
+                <img src="images/exemplo de hash.png" alt="exemplo de hash">
+        </section>
+        <section id="artigo4">
+           
+            <h2>Bitmap</h2>
+            <p>Bitmap Index é uma estrutura de índice onde cada valor distinto em uma coluna é representado por um vetor de bits. Cada bit no vetor corresponde a uma linha na tabela, e o bit é ativado se a linha contiver o valor correspondente. As principais características são:
+                
+                Eficiência para Consultas de Categoria: Ideal para colunas com poucos valores distintos (como gênero ou status).
+                Espaço: Pode consumir muito espaço se houver muitos valores distintos ou se a tabela for muito grande, pois cada valor distinto requer um bitmap separado.
+                Desempenho em Consultas: Muito eficiente para consultas que envolvem operações lógicas sobre colunas categóricas, como combinações de condições (AND, OR).
+                </p>
+                <img src="https://scaler.com/topics/images/how-bitmap-indexing-is-done.webp" alt="bitmap">
+        </section>
+        <footer>
+            <p>&copy; 2024 Guilherme Henrique R. C. Alves</p>
+        </footer>
+    </main>
+</body>
+</html>
+
